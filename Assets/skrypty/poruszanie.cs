@@ -11,23 +11,27 @@ public class poruszanie : MonoBehaviour
     
     void FixedUpdate()//ponoc lepsze przy fizyce i dodawaniu predkosci
     {
-
-        if (Input.GetButton("Horizontal"))
+        if(Input.GetButton("Horizontal") && Input.GetButton("Vertical"))
         {
-            transform.position = transform.position + Input.GetAxis("Horizontal") * Camera.main.transform.right * movementspeed * Time.deltaTime;
+            rb.AddForce(Input.GetAxis("Horizontal") * Camera.main.transform.right * silabok * Time.deltaTime, ForceMode.VelocityChange);
+            rb.AddForce(Input.GetAxis("Vertical") * Camera.main.transform.forward * silaprzod * Time.deltaTime);
+        }
+        else if (Input.GetButton("Horizontal"))
+        {
+            rb.AddForce(Input.GetAxis("Horizontal") * Camera.main.transform.right * silabok * Time.deltaTime,ForceMode.VelocityChange);
         }
 
         else if (Input.GetButton("Vertical"))
-        {
-            transform.position = transform.position + Input.GetAxis("Vertical")*Camera.main.transform.forward * movementspeed * Time.deltaTime;
+        {  
+            rb.AddForce(Input.GetAxis("Vertical") * Camera.main.transform.forward * silaprzod* Time.deltaTime);
         }
 
-        else if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
+        else if (Input.GetButtonDown("Jump") || Input.touchCount == 2)
         {
             rb.AddForce(0, 10*silaprzod * Time.deltaTime, 0);
         }
 
-        else if (Input.touchCount > 1)
+        else if (Input.touchCount == 1 )
         {
             transform.position = transform.position +  Camera.main.transform.forward * movementspeed * Time.deltaTime;
         }

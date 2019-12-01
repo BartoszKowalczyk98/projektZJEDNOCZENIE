@@ -175,8 +175,8 @@
     <Compile Include="Assets\skrypty\levelcomplete.cs" />
     <Compile Include="Assets\skrypty\poruszanie.cs" />
     <Compile Include="Assets\skrypty\score.cs" />
+    <Compile Include="Assets\skrypty\spinMeRightRound.cs" />
     <Compile Include="Assets\skrypty\Startgame.cs" />
-    <Compile Include="Assets\spinMeRightRound.cs" />
     <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrController.shader" />
