@@ -14,13 +14,11 @@ public class poruszanie : MonoBehaviour
 
         if (Input.GetButton("Horizontal"))
         {
-            rb.AddForce(Input.GetAxis("Horizontal") * silabok * Time.deltaTime * Camera.main.transform.forward.x, 0, 0, ForceMode.VelocityChange);
-  
+            transform.position = transform.position + Input.GetAxis("Horizontal") * Camera.main.transform.right * movementspeed * Time.deltaTime;
         }
 
         else if (Input.GetButton("Vertical"))
         {
-            /*rb.AddForce(0, 0, Input.GetAxis("Vertical") * silaprzod * Time.deltaTime);*/
             transform.position = transform.position + Input.GetAxis("Vertical")*Camera.main.transform.forward * movementspeed * Time.deltaTime;
         }
 
