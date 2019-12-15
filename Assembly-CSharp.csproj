@@ -168,6 +168,7 @@
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\Playercontrollerscript.cs" />
     <Compile Include="Assets\Playercontrolls.cs" />
+    <Compile Include="Assets\pokazZnak.cs" />
     <Compile Include="Assets\skrypty\ChangeColor.cs" />
     <Compile Include="Assets\skrypty\collisionscript.cs" />
     <Compile Include="Assets\skrypty\credits.cs" />
