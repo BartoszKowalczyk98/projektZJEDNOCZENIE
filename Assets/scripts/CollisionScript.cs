@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class collisionscript : MonoBehaviour
+public class CollisionScript : MonoBehaviour
 {
-    public poruszanie chodzenie;
+    public MovementScript chodzenie;
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "Obstacle")

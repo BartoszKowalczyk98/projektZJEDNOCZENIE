@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class pokazZnak : MonoBehaviour
+public class ShowSignInfoScript : MonoBehaviour
 {
     public Canvas infoOZnaku;
     public float delay = 0.5f;

@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 88530245}
   - component: {fileID: 88530248}
   - component: {fileID: 88530247}
-  - component: {fileID: 88530246}
   m_Layer: 5
   m_Name: credits
   m_TagString: Untagged
@@ -241,9 +240,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 753127657}
   - {fileID: 1099515825}
   - {fileID: 1108959823}
-  - {fileID: 753127657}
   m_Father: {fileID: 1017640610}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -252,18 +251,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &88530246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88530244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5fe0a04f3e5324689a3904e6787e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &88530247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138266511}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CameraRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138266510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 157, y: 293, z: -327}
+  m_LocalPosition: {x: 209, y: 285, z: -327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429445465}
@@ -500,6 +487,8 @@ GameObject:
   - component: {fileID: 753127660}
   - component: {fileID: 753127659}
   - component: {fileID: 753127658}
+  - component: {fileID: 753127662}
+  - component: {fileID: 753127663}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -514,13 +503,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753127656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1808554399}
   m_Father: {fileID: 88530245}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -549,7 +538,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753127656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -585,7 +574,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 88530246}
+      - m_Target: {fileID: 0}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -632,6 +621,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753127656}
   m_CullTransparentMesh: 0
+--- !u!114 &753127662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753127656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 753127663}
+          m_MethodName: Quit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &753127663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753127656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5fe0a04f3e5324689a3904e6787e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1017640606
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,12 +847,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88530245}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5, y: -0.7}
-  m_SizeDelta: {x: 631.3, y: 313.9}
+  m_AnchoredPosition: {x: 1.5, y: 96}
+  m_SizeDelta: {x: 365.62, y: 313.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099515826
 MonoBehaviour:
@@ -856,7 +885,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Koniec gierki
+  m_Text: "Narazie to tyle demo zako\u0144czone"
 --- !u!222 &1099515827
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -952,12 +981,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88530245}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -131}
-  m_SizeDelta: {x: 631.3, y: 313.9}
+  m_AnchoredPosition: {x: 3, y: -63}
+  m_SizeDelta: {x: 310.6, y: 313.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108959824
 MonoBehaviour:
@@ -990,7 +1019,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: mady by bartaldo
+  m_Text: 'Made by
+
+    Bartollini
+
+    Macik
+
+    Endrju
+
+    Pomocny duszek Adam'
 --- !u!222 &1108959825
 CanvasRenderer:
   m_ObjectHideFlags: 0

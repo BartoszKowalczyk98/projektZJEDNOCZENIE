@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class credits : MonoBehaviour
+public class FinishApp : MonoBehaviour
 {
     public void Quit()
     {

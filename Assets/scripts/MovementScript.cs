@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class poruszanie : MonoBehaviour
+public class MovementScript : MonoBehaviour
 {
     public Rigidbody rb;
 

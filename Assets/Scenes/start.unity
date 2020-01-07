@@ -432,17 +432,16 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 4eedafad5084240419e649245c7b2093, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "jak chcesz rozpocz\u0105\u0107 gr\u0119 to kliknij lataj\u0105cy przycisk
-    pode mn\u0105"
+  m_Text: PRESS PLAY TO PLAY
 --- !u!222 &560230625
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -30,11 +30,11 @@ public class Playercontrollerscript : MonoBehaviour
     private void Update()
     {
         Vector3 m = new Vector3(0, 0, wektorporuszania.y) * Time.deltaTime;
-        Debug.Log("rotacja " + transform.rotation);
+        
         if (!transform.rotation.Equals( Vector3.zero)) {
             m.x = transform.rotation.y * wektorporuszania.y;
         }
-        Debug.Log("poruszanie "+m);
+        
         m.z *= silaprzod;
         m.x *= silabok;
         rb.AddForce(m );
