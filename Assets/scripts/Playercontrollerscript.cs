@@ -14,7 +14,7 @@ public class Playercontrollerscript : MonoBehaviour
     public float silaprzod;
     public float silabok;
     public float movementspeed;
-    
+    public Transform rower;
 
     private void Awake()
     {
@@ -41,6 +41,18 @@ public class Playercontrollerscript : MonoBehaviour
 
         Vector2 r = new Vector2(0, wektorobrotu.x) * Time.deltaTime * 100f;
         transform.Rotate(r, Space.World);
+        if (wektorporuszania.y!=0) 
+        {
+            for (int i = 0; i < rower.childCount; i++)
+            {
+                Transform komponent = rower.GetChild(i);
+                if (komponent.name.Contains("Circle"))
+                {
+                    komponent.Rotate(new Vector3(0,0,-wektorporuszania.y), Space.Self);
+                    Debug.Log(komponent.name);
+                }
+            }
+        }
 
     }
     private void OnEnable()
