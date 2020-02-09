@@ -19,7 +19,7 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
             ""id"": ""18b155ae-8161-4175-9e17-30a3cf822f85"",
             ""actions"": [
                 {
-                    ""name"": ""grow"",
+                    ""name"": ""click"",
                     ""type"": ""Button"",
                     ""id"": ""e90d9775-b6dd-4b4e-b5b0-f2d3d6b059a1"",
                     ""expectedControlType"": """",
@@ -51,7 +51,7 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""grow"",
+                    ""action"": ""click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -84,7 +84,7 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
 }");
         // actionmap
         m_actionmap = asset.FindActionMap("actionmap", throwIfNotFound: true);
-        m_actionmap_grow = m_actionmap.FindAction("grow", throwIfNotFound: true);
+        m_actionmap_click = m_actionmap.FindAction("click", throwIfNotFound: true);
         m_actionmap_move = m_actionmap.FindAction("move", throwIfNotFound: true);
         m_actionmap_rotate = m_actionmap.FindAction("rotate", throwIfNotFound: true);
     }
@@ -136,14 +136,14 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
     // actionmap
     private readonly InputActionMap m_actionmap;
     private IActionmapActions m_ActionmapActionsCallbackInterface;
-    private readonly InputAction m_actionmap_grow;
+    private readonly InputAction m_actionmap_click;
     private readonly InputAction m_actionmap_move;
     private readonly InputAction m_actionmap_rotate;
     public struct ActionmapActions
     {
         private @Playercontrolls m_Wrapper;
         public ActionmapActions(@Playercontrolls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @grow => m_Wrapper.m_actionmap_grow;
+        public InputAction @click => m_Wrapper.m_actionmap_click;
         public InputAction @move => m_Wrapper.m_actionmap_move;
         public InputAction @rotate => m_Wrapper.m_actionmap_rotate;
         public InputActionMap Get() { return m_Wrapper.m_actionmap; }
@@ -155,9 +155,9 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_ActionmapActionsCallbackInterface != null)
             {
-                @grow.started -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnGrow;
-                @grow.performed -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnGrow;
-                @grow.canceled -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnGrow;
+                @click.started -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnClick;
+                @click.performed -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnClick;
+                @click.canceled -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnClick;
                 @move.started -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnMove;
                 @move.performed -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnMove;
                 @move.canceled -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnMove;
@@ -168,9 +168,9 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
             m_Wrapper.m_ActionmapActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @grow.started += instance.OnGrow;
-                @grow.performed += instance.OnGrow;
-                @grow.canceled += instance.OnGrow;
+                @click.started += instance.OnClick;
+                @click.performed += instance.OnClick;
+                @click.canceled += instance.OnClick;
                 @move.started += instance.OnMove;
                 @move.performed += instance.OnMove;
                 @move.canceled += instance.OnMove;
@@ -183,7 +183,7 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
     public ActionmapActions @actionmap => new ActionmapActions(this);
     public interface IActionmapActions
     {
-        void OnGrow(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
     }
