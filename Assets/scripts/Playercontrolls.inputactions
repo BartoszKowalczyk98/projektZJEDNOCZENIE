@@ -6,7 +6,7 @@
             "id": "18b155ae-8161-4175-9e17-30a3cf822f85",
             "actions": [
                 {
-                    "name": "grow",
+                    "name": "click",
                     "type": "Button",
                     "id": "e90d9775-b6dd-4b4e-b5b0-f2d3d6b059a1",
                     "expectedControlType": "",
@@ -38,7 +38,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "grow",
+                    "action": "click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
