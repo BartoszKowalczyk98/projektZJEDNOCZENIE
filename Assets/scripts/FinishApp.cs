@@ -1,16 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class FinishApp : MonoBehaviour
 {
-    private bool closable;
-    public void Quit()
+    private bool closable = false;
+    private bool menuable = false;
+    private void coontrollerHandler()
     {
         if (closable)
         {
             //Debug.Log("koniec");
             Application.Quit();
+        }
+        else if(menuable)
+        {
+            SceneManager.LoadScene(0);
         }
             
     }
@@ -21,15 +25,26 @@ public class FinishApp : MonoBehaviour
     {
         closable = true;
     }
-    public void currorOffButtonExit()
+    public void cursorOffButtonExit()
     {
         closable = false;
     }
 
+    public void cursorOnButtonMenu()
+    {
+        menuable = true;
+    }
+
+    public void cursorOffButtonMenu()
+    {
+        menuable = false;
+    }
+
+
     private void Awake()
     {
         controlls = new Playercontrolls();
-        controlls.actionmap.click.performed += ctx => Quit();
+        controlls.actionmap.click.performed += ctx => coontrollerHandler();
     }
     
     private void OnEnable()
