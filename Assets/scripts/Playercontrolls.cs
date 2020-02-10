@@ -41,6 +41,22 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""d7d05aae-cc82-442a-b22f-fe8ff8184715"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""restart"",
+                    ""type"": ""Button"",
+                    ""id"": ""e4dea02b-7fd9-44fc-a55d-0c21b32cd9b6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -76,6 +92,28 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
                     ""action"": ""rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c8ca069-cd63-4f9c-b0ed-f234d654e68c"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a9fe623-5f65-4d4f-acc1-15a33e168a64"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""restart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -87,6 +125,8 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
         m_actionmap_click = m_actionmap.FindAction("click", throwIfNotFound: true);
         m_actionmap_move = m_actionmap.FindAction("move", throwIfNotFound: true);
         m_actionmap_rotate = m_actionmap.FindAction("rotate", throwIfNotFound: true);
+        m_actionmap_menu = m_actionmap.FindAction("menu", throwIfNotFound: true);
+        m_actionmap_restart = m_actionmap.FindAction("restart", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -139,6 +179,8 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
     private readonly InputAction m_actionmap_click;
     private readonly InputAction m_actionmap_move;
     private readonly InputAction m_actionmap_rotate;
+    private readonly InputAction m_actionmap_menu;
+    private readonly InputAction m_actionmap_restart;
     public struct ActionmapActions
     {
         private @Playercontrolls m_Wrapper;
@@ -146,6 +188,8 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
         public InputAction @click => m_Wrapper.m_actionmap_click;
         public InputAction @move => m_Wrapper.m_actionmap_move;
         public InputAction @rotate => m_Wrapper.m_actionmap_rotate;
+        public InputAction @menu => m_Wrapper.m_actionmap_menu;
+        public InputAction @restart => m_Wrapper.m_actionmap_restart;
         public InputActionMap Get() { return m_Wrapper.m_actionmap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -164,6 +208,12 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
                 @rotate.started -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnRotate;
                 @rotate.performed -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnRotate;
                 @rotate.canceled -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnRotate;
+                @menu.started -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnMenu;
+                @menu.performed -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnMenu;
+                @menu.canceled -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnMenu;
+                @restart.started -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnRestart;
+                @restart.performed -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnRestart;
+                @restart.canceled -= m_Wrapper.m_ActionmapActionsCallbackInterface.OnRestart;
             }
             m_Wrapper.m_ActionmapActionsCallbackInterface = instance;
             if (instance != null)
@@ -177,6 +227,12 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
                 @rotate.started += instance.OnRotate;
                 @rotate.performed += instance.OnRotate;
                 @rotate.canceled += instance.OnRotate;
+                @menu.started += instance.OnMenu;
+                @menu.performed += instance.OnMenu;
+                @menu.canceled += instance.OnMenu;
+                @restart.started += instance.OnRestart;
+                @restart.performed += instance.OnRestart;
+                @restart.canceled += instance.OnRestart;
             }
         }
     }
@@ -186,5 +242,7 @@ public class @Playercontrolls : IInputActionCollection, IDisposable
         void OnClick(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
+        void OnRestart(InputAction.CallbackContext context);
     }
 }

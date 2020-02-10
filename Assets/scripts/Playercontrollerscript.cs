@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-using UnityEngine.InputSystem;
-
 public class Playercontrollerscript : MonoBehaviour
 {
     Playercontrolls controlls;
@@ -26,6 +23,8 @@ public class Playercontrollerscript : MonoBehaviour
         controlls.actionmap.move.canceled += ctx => wektorporuszania = Vector2.zero;
         controlls.actionmap.rotate.performed += ctx => wektorobrotu = ctx.ReadValue<Vector2>();
         controlls.actionmap.rotate.canceled += ctx => wektorobrotu= Vector2.zero;
+        controlls.actionmap.menu.performed += ctx => UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        controlls.actionmap.restart.performed += ctx => UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 
     private void Update()
