@@ -6,9 +6,15 @@ public class Startgame : MonoBehaviour
 
     Playercontrolls controlls;
     private int ktorascena;
-    public void Starcik(int iskda)
+    private bool clickable = false;
+    public void cursorOnButton(int nrsceny)
     {
-        ktorascena = iskda;
+        clickable = true;
+        ktorascena = nrsceny;
+    }
+    public void cursorOffButton()
+    {
+        clickable = false;
     }
     private void Awake()
     {
@@ -17,7 +23,8 @@ public class Startgame : MonoBehaviour
     }
     private void sceneloadingMethod()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + ktorascena);
+        if(clickable)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + ktorascena);
     }
     private void OnEnable()
     {
