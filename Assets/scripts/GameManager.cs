@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public float restartdelay = 1f;
     public Text scoretext;
 
-    public GameObject completelevelUI;
     public void EndGame()
     {
         if (!gameHasEnded)
@@ -27,6 +26,6 @@ public class GameManager : MonoBehaviour
    
     public void CompleteLevel()
     {
-        completelevelUI.SetActive(true); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

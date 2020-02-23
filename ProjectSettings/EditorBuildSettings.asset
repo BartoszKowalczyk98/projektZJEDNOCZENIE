@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/scena3.unity
     guid: f6a93f27480d50d43a1e5c6a4e21ce32
   - enabled: 1
+    path: Assets/Scenes/scena4.unity
+    guid: cfde47560a056a943bbcb64e7d749e69
+  - enabled: 1
+    path: Assets/Scenes/scena5.unity
+    guid: 46a5b9210d76a9949b317c19752e69d2
+  - enabled: 1
     path: Assets/Scenes/creditsy.unity
     guid: e65bdf3be0f9d0c44a15848b3cff9404
   m_configObjects: {}
