@@ -17,7 +17,7 @@ public class Startgame : MonoBehaviour
     {
         clickable = false;
     }
-    public void cursorOnExit(int nrsceny)
+    public void cursorOnExit()
     {
         closable = true;
     }
