@@ -45,8 +45,11 @@ public class FinishApp : MonoBehaviour
     {
         controlls = new Playercontrolls();
         controlls.actionmap.click.performed += ctx => coontrollerHandler();
+        controlls.actionmap.menu.performed += ctx => UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        controlls.actionmap.restart.performed += ctx => UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+
     }
-    
+
     private void OnEnable()
     {
         controlls.actionmap.Enable();
