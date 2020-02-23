@@ -20,6 +20,9 @@ public class Startgame : MonoBehaviour
     {
         controlls = new Playercontrolls();
         controlls.actionmap.click.performed += ctx => sceneloadingMethod();
+        controlls.actionmap.menu.performed += ctx => UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        controlls.actionmap.restart.performed += ctx => UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+
     }
     private void sceneloadingMethod()
     {
