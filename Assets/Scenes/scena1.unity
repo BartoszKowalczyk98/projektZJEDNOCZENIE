@@ -3427,7 +3427,12 @@ PrefabInstance:
     - target: {fileID: -1504981713932161579, guid: f2ee6337bff7aca4098af64ca9c7eea3,
         type: 3}
       propertyPath: m_ReceiveShadows
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: f2ee6337bff7aca4098af64ca9c7eea3,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: f2ee6337bff7aca4098af64ca9c7eea3,
         type: 3}
@@ -4815,7 +4820,7 @@ PrefabInstance:
       objectReference: {fileID: 1665567049}
     - target: {fileID: 118103318, guid: 5f38471a8224eb64086b4b7820d0281b, type: 3}
       propertyPath: m_PlaneDistance
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4420699108570690521, guid: 5f38471a8224eb64086b4b7820d0281b,
         type: 3}
