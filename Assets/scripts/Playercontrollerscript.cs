@@ -10,9 +10,7 @@ public class Playercontrollerscript : MonoBehaviour
     public Rigidbody rb;
     public float silaprzod;
     public float silabok;
-    public float movementspeed;
     public Transform rower;
-    private Vector4 zerowy;
 
     private void Awake()
     {
