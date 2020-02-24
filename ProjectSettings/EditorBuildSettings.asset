@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/start.unity
     guid: 247c1086926b8d1458a832dd84bf4993
-  - enabled: 0
-    path: Assets/Scenes/scena1demo.unity
-    guid: 0a7c52a0ca5dc9c4da671fb7b3416041
   - enabled: 1
     path: Assets/Scenes/scena1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
@@ -26,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scena5.unity
     guid: 46a5b9210d76a9949b317c19752e69d2
+  - enabled: 1
+    path: Assets/Scenes/scena6.unity
+    guid: d357791acedd5ed498397a9fadb82356
   - enabled: 1
     path: Assets/Scenes/creditsy.unity
     guid: e65bdf3be0f9d0c44a15848b3cff9404

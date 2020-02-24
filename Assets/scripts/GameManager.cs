@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public bool gameHasEnded = false;
     public float restartdelay = 0.5f;
-    public Text scoretext;
     public Animator animator;
 
     public void EndGame()
@@ -32,6 +31,7 @@ public class GameManager : MonoBehaviour
     }
     void loadnext() 
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(0);
     }
 }

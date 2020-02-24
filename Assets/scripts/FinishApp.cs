@@ -5,11 +5,12 @@ public class FinishApp : MonoBehaviour
 {
     private bool closable = false;
     private bool menuable = false;
+
+    Playercontrolls controlls;
     private void coontrollerHandler()
     {
         if (closable)
         {
-            //Debug.Log("koniec");
             Application.Quit();
         }
         else if(menuable)
@@ -19,7 +20,6 @@ public class FinishApp : MonoBehaviour
             
     }
 
-    Playercontrolls controlls;
     
     public void cursorOnButtonExit( )
     {
