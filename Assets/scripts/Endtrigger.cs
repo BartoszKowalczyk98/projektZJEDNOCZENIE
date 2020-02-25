@@ -7,7 +7,7 @@ public class Endtrigger : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if(this.CompareTag("zladroga") && other.CompareTag("Player")){
-            gameManager.animator.SetTrigger("fadeouter");
+            gameManager.animator.SetTrigger("zladroga");//zladroga
             gameManager.Invoke("Restart", gameManager.restartdelay);
         }
         else if(other.CompareTag("Player"))
