@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - zladroga
+  - samochod
   layers:
   - Default
   - TransparentFX

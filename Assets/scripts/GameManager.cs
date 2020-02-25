@@ -12,6 +12,18 @@ public class GameManager : MonoBehaviour
     {
         if (!gameHasEnded)
         {
+            
+            gameHasEnded = true;
+            animator.SetTrigger("trawaiinne");//kolizja
+            Invoke("Restart", restartdelay);
+        }
+
+    }
+    public void EndGame2()
+    {
+        if (!gameHasEnded)
+        {
+
             gameHasEnded = true;
             animator.SetTrigger("kolizja");//kolizja
             Invoke("Restart", restartdelay);
