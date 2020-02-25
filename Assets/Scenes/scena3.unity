@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -509,7 +509,7 @@ PrefabInstance:
     - target: {fileID: 374846440752531328, guid: ceb6033d6f76c384fb9e78e709e8357c,
         type: 3}
       propertyPath: m_Text
-      value: "Na skrzy\u017Cowaniu nie mo\u017Cesz skr\u0119ci\u0107 w prawo.s"
+      value: "Na skrzy\u017Cowaniu nie mo\u017Cesz skr\u0119ci\u0107 w prawo."
       objectReference: {fileID: 0}
     - target: {fileID: 374846440752531328, guid: ceb6033d6f76c384fb9e78e709e8357c,
         type: 3}
@@ -524,17 +524,27 @@ PrefabInstance:
     - target: {fileID: 374846440752531329, guid: ceb6033d6f76c384fb9e78e709e8357c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 250
+      value: -103
       objectReference: {fileID: 0}
     - target: {fileID: 374846440752531329, guid: ceb6033d6f76c384fb9e78e709e8357c,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 374846440752531329, guid: ceb6033d6f76c384fb9e78e709e8357c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 374846440752531329, guid: ceb6033d6f76c384fb9e78e709e8357c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 374846442036575368, guid: ceb6033d6f76c384fb9e78e709e8357c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -550
+      value: 148
       objectReference: {fileID: 0}
     - target: {fileID: 374846442036575368, guid: ceb6033d6f76c384fb9e78e709e8357c,
         type: 3}
@@ -545,6 +555,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 374846442036575368, guid: ceb6033d6f76c384fb9e78e709e8357c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 374846442036575368, guid: ceb6033d6f76c384fb9e78e709e8357c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 374846442036575383, guid: ceb6033d6f76c384fb9e78e709e8357c,
         type: 3}
@@ -2045,7 +2065,7 @@ Transform:
   m_Children:
   - {fileID: 1665567050}
   m_Father: {fileID: 0}
-  m_RootOrder: 72
+  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &176118789
 MonoBehaviour:
@@ -2824,7 +2844,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 220
+  m_RootOrder: 221
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &279061685 stripped
 GameObject:
@@ -3197,7 +3217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &324078043 stripped
 GameObject:
@@ -5707,7 +5727,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.0546875, y: 0.109375, z: 0.03125, w: -0.0390625}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9418,7 +9438,7 @@ Transform:
   m_LocalScale: {x: 5000, y: 1, z: 5000}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 78
+  m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1166636066
 PrefabInstance:
@@ -12369,6 +12389,11 @@ PrefabInstance:
       propertyPath: uchwytrowerka
       value: 
       objectReference: {fileID: 1923108689}
+    - target: {fileID: 4420699108570690522, guid: 5f38471a8224eb64086b4b7820d0281b,
+        type: 3}
+      propertyPath: restartdelay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4420699108570690523, guid: 5f38471a8224eb64086b4b7820d0281b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15568,7 +15593,7 @@ Transform:
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1856558614
 PrefabInstance:
