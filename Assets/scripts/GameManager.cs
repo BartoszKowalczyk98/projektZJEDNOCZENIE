@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         if (!gameHasEnded)
         {
             gameHasEnded = true;
-            animator.SetTrigger("fadeouter");
+            animator.SetTrigger("kolizja");//kolizja
             Invoke("Restart", restartdelay);
         }
 
