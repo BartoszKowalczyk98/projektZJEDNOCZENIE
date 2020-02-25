@@ -10,6 +10,10 @@ public class Endtrigger : MonoBehaviour
             gameManager.animator.SetTrigger("zladroga");//zladroga
             gameManager.Invoke("Restart", gameManager.restartdelay);
         }
+        else if (this.CompareTag("Obstacle") && other.CompareTag("Player")){
+            gameManager.animator.SetTrigger("kolizja");//kolizja
+            gameManager.Invoke("Restart", gameManager.restartdelay);
+        }
         else if(other.CompareTag("Player"))
             gameManager.CompleteLevel();
     }
