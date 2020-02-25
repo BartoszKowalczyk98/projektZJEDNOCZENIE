@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1620,7 +1620,7 @@ Transform:
   m_Children:
   - {fileID: 1665567050}
   m_Father: {fileID: 0}
-  m_RootOrder: 157
+  m_RootOrder: 154
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &176118789
 MonoBehaviour:
@@ -3308,7 +3308,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 153
+  m_RootOrder: 150
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &327014490
 PrefabInstance:
@@ -12765,7 +12765,7 @@ RectTransform:
   m_Children:
   - {fileID: 1712304953}
   m_Father: {fileID: 0}
-  m_RootOrder: 167
+  m_RootOrder: 164
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -16261,7 +16261,7 @@ Transform:
   m_LocalScale: {x: 5000, y: 1, z: 5000}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 161
+  m_RootOrder: 158
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1168773543
 PrefabInstance:
@@ -22014,6 +22014,21 @@ PrefabInstance:
       value: "Zanim przejedziesz musisz przepu\u015Bci\u0107 pojazdy, ale dodatkowo
         zawsze musisz zatrzyma\u0107 si\u0119 przed wjazdem na skrzy\u017Cowanie."
       objectReference: {fileID: 0}
+    - target: {fileID: 374846440752531328, guid: ceb6033d6f76c384fb9e78e709e8357c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 374846440752531329, guid: ceb6033d6f76c384fb9e78e709e8357c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 286.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 374846442036575368, guid: ceb6033d6f76c384fb9e78e709e8357c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -150
+      objectReference: {fileID: 0}
     - target: {fileID: 374846442036575383, guid: ceb6033d6f76c384fb9e78e709e8357c,
         type: 3}
       propertyPath: m_Texture
@@ -22128,6 +22143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Panelwejscie
+      objectReference: {fileID: 0}
+    - target: {fileID: 374846442569987979, guid: ceb6033d6f76c384fb9e78e709e8357c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb6033d6f76c384fb9e78e709e8357c, type: 3}
@@ -26584,7 +26604,7 @@ Transform:
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 149
+  m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1851814707
 PrefabInstance:
@@ -30248,7 +30268,7 @@ PrefabInstance:
     - target: {fileID: 3616063236241764158, guid: 797e6f642e3a77a4da7f053767804609,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3616063236241764159, guid: 797e6f642e3a77a4da7f053767804609,
         type: 3}
