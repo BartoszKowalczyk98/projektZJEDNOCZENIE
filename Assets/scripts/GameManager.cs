@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
         {
             uchwytrowerka.SetActive(false);
             gameHasEnded = true;
-            animator.SetTrigger("trawaiinne");//kolizja
+            animator.SetTrigger("trawaiinne");//wjechanie na trawe albo w budynek 
             Invoke("Restart", restartdelay);
         }
 
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         {
             uchwytrowerka.SetActive(false);
             gameHasEnded = true;
-            animator.SetTrigger("kolizja");//kolizja
+            animator.SetTrigger("kolizja");//kolizja z samochodem czy to stojącym czy to co
             Invoke("Restart", restartdelay);
         }
 
